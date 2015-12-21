@@ -1,4 +1,9 @@
 
+/**
+ * Class for storing one BVW Peer Evaluation Rating survey
+ * @author jcchiang
+ *
+ */
 public class SevenValue {
 	public String name;
 	public int samples;
@@ -22,6 +27,14 @@ public class SevenValue {
 			value[i] += other.value[i];
 		}
 		samples ++;
+		
+		if(name.contains("King Kong")){
+			String valueString = "Value: ";
+			for(int i=0; i<7; i++){
+				valueString += other.value[i] + " ";
+			}
+			System.out.println(valueString);
+		}
 	}
 	
 	public int sum(){
@@ -35,11 +48,12 @@ public class SevenValue {
 	public void print(){
 		String nameString = "Name: " + name;
 		String valueString = "Value: ";
+		String validData = "Samples: " + samples;
 		
 		for(int i=0; i<7; i++){
 			valueString += value[i] + " ";
 		}
 		
-		System.out.println(nameString + "\n" + valueString);
+		System.out.println(nameString + "\n" + valueString + "\n" + validData);
 	}
 }

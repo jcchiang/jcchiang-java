@@ -12,7 +12,7 @@ public class RankingCalculation {
 	String currentDirectory;
 	String roundDirectory;
 	
-	final String[] categories = {"Hours Worked", "Leadership", "Efficiency", "Availability", "Easy to Work With", "Creative Contributions", "Quality of Work"};
+	final String[] categories = {"Hours Worked", "Quality of Work", "Creative Contributions", "Easy to Work With", "Availability", "Efficiency", "Leadership"};
 	
 	ArrayList<SevenValue> list;
 	ArrayList<Comparator<SevenValue>> compares;
@@ -163,6 +163,12 @@ public class RankingCalculation {
 	}
 	
 	public void iterateFiles(File[] files) {
+	    for (File file : files) {
+	    	calcOneFile(roundDirectory + file.getName());
+	    }
+	}
+	
+	public void iterateFiles(File[] files, int round) {
 	    for (File file : files) {
 	    	calcOneFile(roundDirectory + file.getName());
 	    }

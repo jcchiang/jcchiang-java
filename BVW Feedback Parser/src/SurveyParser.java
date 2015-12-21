@@ -55,27 +55,6 @@ public class SurveyParser {
 				}
 			}
 		}
-		
-/*
-		try (Scanner scanner = new Scanner(file)) {
-
-			while (scanner.hasNextLine()) {
-				String line = scanner.nextLine();
-				result.append(line).append("\n");
-			}
-
-			scanner.close();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-*/
-		/*
-		for(int j=0; j<list.size(); j++){
-			list.get(j).print();
-		}
-		*/
 		return list;
-
-	  }
+	}
 }
